@@ -1,17 +1,21 @@
 {
-  "name": "friendtalks",
-  "version": "1.0.0",
-  "description": "A messaging application to talk with Friends",
-  "type": "module",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [
-    "JavaScript",
-    "Express",
-    "MongoDB"
-  ],
-  "author": "Priyanshu Mishra",
-  "license": "ISC"
+    "name": "friendtalks",
+    "version": "1.0.0",
+    "description": "A messaging application to talk with Friends",
+    "type": "module",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "JavaScript",
+        "Express",
+        "MongoDB"
+    ],
+    "author": "Priyanshu Mishra",
+    "license": "ISC",
+    "devDependencies": {
+        "dotenv": "^16.4.5",
+        "prettier": "^3.3.3"
+    }
 }
