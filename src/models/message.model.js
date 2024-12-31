@@ -1,23 +1,28 @@
-import mongoose, { Schema } from "mongoose"; 
+import mongoose, { Schema, Types } from "mongoose"; 
 
 const messageSchema = new Schema(
     {
-        content: {
-            type: String, 
+        conversationId: {
+            type: Schema.Types.ObjectId, 
+            ref: "Conversation", 
             required: true, 
         }, 
+        // SenderId: UserId 
         userId: {
             type: Schema.Types.ObjectId, 
             ref: "User", 
+            required: true, 
         }, 
-        chatId: {
-            type: Schema.Types.ObjectId, 
-            ref: "Chat", 
+        messageType: {
+            type: String, 
+            enum: ["text", "image", "video"], 
+            required: true, 
         }, 
-        groupId: {
-            type: Schema.Types.ObjectId, 
-            ref: "Group", 
-        }, 
+        status: {
+            type: String, 
+            enum: ["sent", "seen", "delivered"], 
+            required: true, 
+        }
     }, 
     {
         timestamps: true, 
